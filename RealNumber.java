@@ -29,6 +29,10 @@ public class RealNumber{
       //testing add
       System.out.println(a.add(b).getValue());
       System.out.println(a.add(d).getValue());
+
+      //testing multiply
+      System.out.println(a.multiply(d).getValue());
+      System.out.println(a.multiply(c).getValue());
     }
 
     /*
@@ -62,7 +66,8 @@ public class RealNumber{
     *the product of this and the other
     */
     public RealNumber multiply(RealNumber other){
-          return null;
+          RealNumber product = new RealNumber(value*other.getValue());
+          return product;
     }
 
     /*
