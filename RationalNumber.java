@@ -16,11 +16,16 @@ public class RationalNumber extends RealNumber {
     System.out.println(c.getNumerator());
     System.out.println(c.getDenominator());
 
-    //testing reciprocal
+    // testing reciprocal
     RationalNumber d = b.reciprocal();
     System.out.println(d.getValue());
     System.out.println(d.getNumerator());
     System.out.println(d.getDenominator());
+
+    // testing equals
+    RationalNumber e = new RationalNumber(1, 3);
+    System.out.println(a.equals(c));
+    System.out.println(a.equals(e));
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -70,7 +75,7 @@ public class RationalNumber extends RealNumber {
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
   */
   public boolean equals(RationalNumber other){
-    return false;
+    return this.getValue()==other.getValue();
   }
 
 
