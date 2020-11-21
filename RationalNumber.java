@@ -26,6 +26,9 @@ public class RationalNumber extends RealNumber {
     RationalNumber e = new RationalNumber(1, 3);
     System.out.println(a.equals(c));
     System.out.println(a.equals(e));
+
+    // testing toString
+    System.out.println(a.toString());
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -83,7 +86,7 @@ public class RationalNumber extends RealNumber {
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
-    return "0";
+    return numerator+"/"+denominator;
   }
 
   /**Calculate the GCD of two integers.
