@@ -41,7 +41,11 @@ public class RationalNumber extends RealNumber {
     f.reduce();
     System.out.println(f.getValue());
     System.out.println(f.getNumerator());
-    System.out.println(f.getDenominator());    
+    System.out.println(f.getDenominator());  
+    
+    // testing multiply and divide
+    System.out.println(a.multiply(b).getValue());
+    System.out.println(a.divide(b).getValue());
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -140,21 +144,21 @@ public class RationalNumber extends RealNumber {
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator*other.getNumerator(), denominator*other.getDenominator());
   }
 
   /**
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator*other.getDenominator(), denominator*other.getNumerator());
   }
 
   /**
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator*other.getDenominator()+other.getNumerator()*denominator, denominator*other.getDenominator());
   }
   /**
   *Return a new RationalNumber that this minus the other
