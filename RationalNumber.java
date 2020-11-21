@@ -29,6 +29,9 @@ public class RationalNumber extends RealNumber {
 
     // testing toString
     System.out.println(a.toString());
+
+    // testing gcd
+    System.out.println(gcd(210, 45));
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -95,9 +98,21 @@ public class RationalNumber extends RealNumber {
   *@return the value of the GCD
   */
   private static int gcd(int a, int b){
-    /*use euclids method or a better one*/
-    http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
-    return 0;
+    /*use euclids method or a better one 
+    http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html*/
+    a = Math.abs(a);  b = Math.abs(b);
+    if (a<b) {
+      int temp = b;
+      a = b;
+      b = temp;
+    }
+    int remainder = a%b;
+    while (remainder != 0) {
+      remainder = a%b;
+      a = b;
+      b = remainder;
+    }
+    return a;
   }
 
   /**
