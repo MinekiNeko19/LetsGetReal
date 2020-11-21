@@ -15,6 +15,7 @@ public class RealNumber{
     //---------ONLY EDIT BELOW THIS LINE------------
 
     public static void main (String[] args) {
+      //testing equals
       RealNumber a = new RealNumber(1.00231);
       RealNumber b = new RealNumber(1.00232);
       RealNumber c = new RealNumber(0.00001);
@@ -24,6 +25,10 @@ public class RealNumber{
       System.out.println(a.equals(c));
       System.out.println(d.equals(f));
       System.out.println(d.equals(c));
+
+      //testing add
+      System.out.println(a.add(b).getValue());
+      System.out.println(a.add(d).getValue());
     }
 
     /*
@@ -46,9 +51,10 @@ public class RealNumber{
     *the sum of this and the other
     */
     public RealNumber add(RealNumber other){
-       //other can be ANY RealNumber, including a RationalNumber
-       //or other subclasses of RealNumber (that aren't written yet)
-       return null;
+      //other can be ANY RealNumber, including a RationalNumber
+      //or other subclasses of RealNumber (that aren't written yet)
+      RealNumber sum = new RealNumber(value+other.getValue());
+      return sum;
     }
 
     /*
