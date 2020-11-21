@@ -32,6 +32,16 @@ public class RationalNumber extends RealNumber {
 
     // testing gcd
     System.out.println(gcd(210, 45));
+
+    // testing reduce
+    RationalNumber f = new RationalNumber(210, 45);
+    System.out.println(f.getValue());
+    System.out.println(f.getNumerator());
+    System.out.println(f.getDenominator());
+    f.reduce();
+    System.out.println(f.getValue());
+    System.out.println(f.getNumerator());
+    System.out.println(f.getDenominator());    
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -121,7 +131,9 @@ public class RationalNumber extends RealNumber {
   *reduced after construction.
   */
   private void reduce(){
-
+    int gcd = gcd(numerator, denominator);
+    numerator = numerator/gcd;
+    denominator = denominator/gcd;
   }
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
