@@ -33,6 +33,14 @@ public class RealNumber{
       //testing multiply
       System.out.println(a.multiply(d).getValue());
       System.out.println(a.multiply(c).getValue());
+
+      //testing divide
+      try {
+        System.out.println(a.divide(b));
+        System.out.println(a.divide(d));
+      } catch (ArithmeticException e) {
+        e.printStackTrace();
+      }
     }
 
     /*
@@ -75,7 +83,11 @@ public class RealNumber{
     *this divided by the other
     */
     public RealNumber divide(RealNumber other){
-          return null;
+          if (other.getValue()==0) {
+            throw new ArithmeticException("Division by zero");
+          }
+          RealNumber quotient = new RealNumber(value*other.getValue());
+          return quotient;
     }
 
     /*
