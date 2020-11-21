@@ -5,6 +5,8 @@ public class RationalNumber extends RealNumber {
     // testing constructor and getvalue
     RationalNumber a = new RationalNumber(1, 3);
     System.out.println(a.getValue());
+    System.out.println(a.getNumerator());
+    System.out.println(a.getDenominator());
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -27,13 +29,13 @@ public class RationalNumber extends RealNumber {
   *@return the numerator
   */
   public int getNumerator(){
-    return 0;
+    return numerator;
   }
   /**
   *@return the denominator
   */
   public int getDenominator(){
-    return 0;
+    return denominator;
   }
   /**
   *@return a new RationalNumber that has the same numerator
