@@ -15,6 +15,12 @@ public class RationalNumber extends RealNumber {
     System.out.println(c.getValue());
     System.out.println(c.getNumerator());
     System.out.println(c.getDenominator());
+
+    //testing reciprocal
+    RationalNumber d = b.reciprocal();
+    System.out.println(d.getValue());
+    System.out.println(d.getNumerator());
+    System.out.println(d.getDenominator());
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -58,7 +64,7 @@ public class RationalNumber extends RealNumber {
   *and denominator as this RationalNumber but reversed.
   */
   public RationalNumber reciprocal(){
-    return null;
+    return new RationalNumber(denominator, numerator);
   }
   /**
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
