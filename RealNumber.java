@@ -41,6 +41,12 @@ public class RealNumber{
       } catch (ArithmeticException e) {
         e.printStackTrace();
       }
+
+      //testing subtract kinda sus
+      System.out.println(a.subtract(b).getValue());
+      System.out.println(b.subtract(a).getValue());
+      System.out.println(d.subtract(c).getValue());
+      System.out.println(b.subtract(d).getValue());
     }
 
     /*
@@ -74,8 +80,8 @@ public class RealNumber{
     *the product of this and the other
     */
     public RealNumber multiply(RealNumber other){
-          RealNumber product = new RealNumber(value*other.getValue());
-          return product;
+          // RealNumber product = new RealNumber(value*other.getValue()); // experiment
+          return new RealNumber(value*other.getValue());
     }
 
     /*
@@ -95,6 +101,7 @@ public class RealNumber{
     *this minus the other
     */
     public RealNumber subtract(RealNumber other){
-      return null;
+      RealNumber difference = new RealNumber(value-other.getValue());
+      return difference;
     }
   }
