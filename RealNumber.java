@@ -16,10 +16,14 @@ public class RealNumber{
 
     public static void main (String[] args) {
       RealNumber a = new RealNumber(1.00231);
-      RealNumber b = new RealNumber(1.00231);
-      RealNumber c = new RealNumber(23.4369);
+      RealNumber b = new RealNumber(1.00232);
+      RealNumber c = new RealNumber(0.00001);
+      RealNumber d = new RealNumber(0);
+      RealNumber f = new RealNumber(0);
       System.out.println(a.equals(b));
       System.out.println(a.equals(c));
+      System.out.println(d.equals(f));
+      System.out.println(d.equals(c));
     }
 
     /*
@@ -27,11 +31,14 @@ public class RealNumber{
     *Special case: if one is exactly zero, the other must be exactly zero.
     */
     public boolean equals(RealNumber other){
-      double difference = Math.abs((value-other.getValue()))/value;
-      if (difference <= 0.00001) {
-        return true;
+      if (value != 0) {
+        double difference = Math.abs((value-other.getValue()))/value;
+        if (difference <= 0.00001) {
+          return true;
+        }
+        return false;
       }
-      return false;
+      return value==other.value;
     }
 
     /*
