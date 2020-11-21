@@ -46,6 +46,10 @@ public class RationalNumber extends RealNumber {
     // testing multiply and divide
     System.out.println(a.multiply(b).getValue());
     System.out.println(a.divide(b).getValue());
+
+    // testing add and subtract
+    System.out.println(a.add(b).getValue());
+    System.out.println(b.subtract(a).getValue());
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -164,6 +168,6 @@ public class RationalNumber extends RealNumber {
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator*other.getDenominator()-other.getNumerator()*denominator, denominator*other.getDenominator());
   }
 } 
