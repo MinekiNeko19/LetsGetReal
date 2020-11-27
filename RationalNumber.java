@@ -29,6 +29,8 @@ public class RationalNumber extends RealNumber {
 
     // testing toString
     System.out.println(a.toString());
+    System.out.println(c.toString());
+    System.out.println(new RationalNumber(8, 1).toString());
 
     // testing gcd
     System.out.println(gcd(210, 45));
@@ -107,6 +109,12 @@ public class RationalNumber extends RealNumber {
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
+    if (numerator==0) {
+      return "0";
+    }
+    if (denominator==1) {
+      return ""+numerator;
+    }
     return numerator+"/"+denominator;
   }
 
