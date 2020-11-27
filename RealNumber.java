@@ -53,16 +53,16 @@ public class RealNumber extends Number{
     *Return true when the values are within 0.001% of eachother.
     *Special case: if one is exactly zero, the other must be exactly zero.
     */
-    public boolean equals(RealNumber other){
-      if (value != 0) {
-        double difference = Math.abs((value-other.getValue()))/value;
-        if (difference <= 0.00001) {
-          return true;
-        }
-        return false;
-      }
-      return value==other.getValue();
-    }
+    // public boolean equals(RealNumber other){
+    //   if (value != 0) {
+    //     double difference = Math.abs((value-other.getValue()))/value;
+    //     if (difference <= 0.00001) {
+    //       return true;
+    //     }
+    //     return false;
+    //   }
+    //   return value==other.getValue();
+    // }
 
     /*
     *Return a new RealNumber that has the value of:
