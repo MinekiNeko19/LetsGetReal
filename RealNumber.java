@@ -1,4 +1,4 @@
-public class RealNumber{
+public class RealNumber extends Number{
     private double value;
 
     public RealNumber(double v){
@@ -61,7 +61,7 @@ public class RealNumber{
         }
         return false;
       }
-      return value==other.value;
+      return value==other.getValue();
     }
 
     /*
