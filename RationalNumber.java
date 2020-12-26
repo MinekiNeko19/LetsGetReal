@@ -3,55 +3,55 @@ public class RationalNumber extends RealNumber {
 
   public static void main(String[] args) {
     // testing constructor and getvalues
-    RationalNumber a = new RationalNumber(1, 3);
-    System.out.println(a.getValue());
-    System.out.println(a.getNumerator());
-    System.out.println(a.getDenominator());
-    RationalNumber b = new RationalNumber(2,-3);
-    System.out.println(b.getValue());
-    System.out.println(b.getNumerator());
-    System.out.println(b.getDenominator());
-    RationalNumber c = new RationalNumber(9, 0);
-    System.out.println(c.getValue());
-    System.out.println(c.getNumerator());
-    System.out.println(c.getDenominator());
+    // RationalNumber a = new RationalNumber(1, 3);
+    // System.out.println(a.getValue());
+    // System.out.println(a.getNumerator());
+    // System.out.println(a.getDenominator());
+    // RationalNumber b = new RationalNumber(2,-3);
+    // System.out.println(b.getValue());
+    // System.out.println(b.getNumerator());
+    // System.out.println(b.getDenominator());
+    // RationalNumber c = new RationalNumber(9, 0);
+    // System.out.println(c.getValue());
+    // System.out.println(c.getNumerator());
+    // System.out.println(c.getDenominator());
 
     // testing reciprocal
-    RationalNumber d = b.reciprocal();
-    System.out.println(d.getValue());
-    System.out.println(d.getNumerator());
-    System.out.println(d.getDenominator());
+    // RationalNumber d = b.reciprocal();
+    // System.out.println(d.getValue());
+    // System.out.println(d.getNumerator());
+    // System.out.println(d.getDenominator());
 
     // testing equals
-    RationalNumber e = new RationalNumber(1, 3);
-    System.out.println(a.equals(c));
-    System.out.println(a.equals(e));
+    // RationalNumber e = new RationalNumber(1, 3);
+    // System.out.println(a.equals(c));
+    // System.out.println(a.equals(e));
 
     // testing toString
-    System.out.println(a.toString());
-    System.out.println(c.toString());
-    System.out.println(new RationalNumber(8, 1).toString());
+    // System.out.println(a.toString());
+    // System.out.println(c.toString());
+    // System.out.println(new RationalNumber(8, 1).toString());
 
     // testing gcd
-    System.out.println(gcd(210, 45));
+    // System.out.println(gcd(210, 45));
 
     // testing reduce
-    RationalNumber f = new RationalNumber(210, 45);
-    System.out.println(f.getValue());
-    System.out.println(f.getNumerator());
-    System.out.println(f.getDenominator());
-    f.reduce();
-    System.out.println(f.getValue());
-    System.out.println(f.getNumerator());
-    System.out.println(f.getDenominator());  
+    // RationalNumber f = new RationalNumber(210, 45);
+    // System.out.println(f.getValue());
+    // System.out.println(f.getNumerator());
+    // System.out.println(f.getDenominator());
+    // f.reduce();
+    // System.out.println(f.getValue());
+    // System.out.println(f.getNumerator());
+    // System.out.println(f.getDenominator());  
     
     // testing multiply and divide
-    System.out.println(a.multiply(b).getValue());
-    System.out.println(a.divide(b).getValue());
+    // System.out.println(a.multiply(b).getValue());
+    // System.out.println(a.divide(b).getValue());
 
     // testing add and subtract
-    System.out.println(a.add(b).getValue());
-    System.out.println(b.subtract(a).getValue());
+    // System.out.println(a.add(b).getValue());
+    // System.out.println(b.subtract(a).getValue());
   }
 
   /**Initialize the RationalNumber with the provided values
@@ -72,6 +72,7 @@ public class RationalNumber extends RealNumber {
       numerator = nume;
       denominator = deno;
     }
+    this.reduce();
   }
 
   public double getValue(){
