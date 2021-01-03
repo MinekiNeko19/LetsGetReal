@@ -7,7 +7,7 @@ public class RationalNumber extends RealNumber {
     // System.out.println(a.getValue());
     // System.out.println(a.getNumerator());
     // System.out.println(a.getDenominator());
-    // RationalNumber b = new RationalNumber(2,-3);
+    // RationalNumber b = new RationalNumber(13,-3);
     // System.out.println(b.getValue());
     // System.out.println(b.getNumerator());
     // System.out.println(b.getDenominator());
@@ -46,7 +46,7 @@ public class RationalNumber extends RealNumber {
     // System.out.println(f.getDenominator());  
     
     // testing multiply and divide
-    // System.out.println(a.multiply(b).getValue());
+    // System.out.println(a.multiply(b).getValue()); 
     // System.out.println(a.divide(b).getValue());
 
     // testing add and subtract
@@ -72,7 +72,7 @@ public class RationalNumber extends RealNumber {
       numerator = nume;
       denominator = deno;
     }
-    this.reduce();
+    // this.reduce();
   }
 
   public double getValue(){
@@ -139,7 +139,7 @@ public class RationalNumber extends RealNumber {
       a = b;
       b = remainder;
     }
-    return a;
+    return b;
   }
 
   /**
